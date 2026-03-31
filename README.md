@@ -1,17 +1,17 @@
 # SLDSIcons
 
-Salesforce Lightning Design System Icons for Android.
+A Kotlin library for accessing Salesforce Lightning Design System (SLDS) icons in Android applications.
 
 ## Overview
 
-SLDSIcons provides SLDS icons from the [`@salesforce-ux/icons`](https://www.npmjs.com/package/@salesforce-ux/icons) npm package for Android applications. Icons are stored as Vector Drawables with type-safe Kotlin enum APIs, preserving vector quality at any size.
+SLDSIcons is a pre-compiled binary library (AAR) that provides type-safe Kotlin APIs and Jetpack Compose composables for loading and rendering SLDS icons sourced from the [`@salesforce-ux/icons`](https://www.npmjs.com/package/@salesforce-ux/icons) npm package. Icons are bundled inside the library as Vector Drawables, preserving vector quality at any size. Developers interact with icons through code APIs — not by accessing raw image files directly.
 
 ### Features
 
-- **Dynamic Categories**: All icon categories from the npm package are automatically discovered and included
-- **Vector Drawables**: Icons maintain crisp quality at any size
 - **Type-Safe API**: Kotlin enums provide compile-time safety for icon access
 - **Jetpack Compose Support**: Easy-to-use composables for modern Android UI
+- **Dynamic Categories**: All icon categories from the npm package are automatically discovered and included
+- **Vector Drawables**: Icons maintain crisp quality at any size
 - **Flexible Rendering**: Support for custom sizing and tinting
 
 ## Installation
@@ -312,7 +312,7 @@ Please follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## License
 
-SLDSIcons is available under the Apache 2.0 license. See the [LICENSE.txt](LICENSE.txt) file for more info.
+SLDSIcons is available under the terms specified in the [TERMS_OF_USE.txt](TERMS_OF_USE.txt) file.
 
 ## Additional Resources
 
