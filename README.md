@@ -14,37 +14,62 @@ SLDSIcons is a pre-compiled binary library (AAR) that provides type-safe Kotlin 
 - **Vector Drawables**: Icons maintain crisp quality at any size
 - **Flexible Rendering**: Support for custom sizing and tinting
 
+## Prerequisites
+
+- Android Studio Meerkat 2024.3.1 or newer
+- Kotlin 2.1.0+
+- Minimum SDK: API level 28 (Android 9)
+- Jetpack Compose (optional, for Compose support)
+
 ## Installation
 
-### Gradle
+### Step 1: Add the Maven Repository
 
-Add SLDSIcons to your `build.gradle.kts`:
+Add the SLDSIcons Maven repository to your project's `settings.gradle.kts`:
+
+```kotlin
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url = uri("https://opensource.salesforce.com/SLDSIcons-Android/slds-icons-repository")
+        }
+    }
+}
+```
+
+Or if using `settings.gradle` (Groovy):
+
+```groovy
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://opensource.salesforce.com/SLDSIcons-Android/slds-icons-repository' }
+    }
+}
+```
+
+### Step 2: Add the Dependency
+
+Add SLDSIcons to your module's `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("com.salesforce.android.sldsicons:slds-icons:1.0.0")
+    implementation("com.salesforce.android.sldsicons:slds-icons:<version>")
 }
 ```
 
-Or in Groovy `build.gradle`:
+Or in `build.gradle` (Groovy):
 
-```gradle
+```groovy
 dependencies {
-    implementation 'com.salesforce.android.sldsicons:slds-icons:1.0.0'
+    implementation 'com.salesforce.android.sldsicons:slds-icons:<version>'
 }
 ```
 
-### Maven
-
-Add SLDSIcons to your `pom.xml`:
-
-```xml
-<dependency>
-    <groupId>com.salesforce.android.sldsicons</groupId>
-    <artifactId>slds-icons</artifactId>
-    <version>1.0.0</version>
-</dependency>
-```
+> Check the [releases](https://github.com/salesforce/SLDSIcons-Android/releases) for the latest available version.
 
 ## Usage
 
@@ -259,8 +284,8 @@ Icons can be used as follows:
 
 ## Requirements
 
-- Android API 30+
-- Kotlin 1.9+
+- Android API 28+
+- Kotlin 2.1.0+
 - Jetpack Compose (optional, for Compose support)
 
 ## Troubleshooting
